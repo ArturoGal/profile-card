@@ -1,0 +1,41 @@
+.profile-card {
+    color: white;
+    background: #111836;
+    border-radius: 6%;
+    margin: 10px;
+    position: relative;
+}
+
+p#kitNumber {
+    font-size: 3rem;
+    position: absolute;
+    left: 12%;
+}
+
+p#name {
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div#details {
+    padding-bottom: 10px;
+}
+
+p {
+    display: inline;
+}
+
+div.info-slot {
+    padding: 4px;
+    text-align: center;
+}
+
+#photo {
+    width: 250px;
+    height: 280px;
+    border-radius: 6%;
+    margin: 10px;
+}
