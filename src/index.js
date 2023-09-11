@@ -33,7 +33,7 @@ const players = [
 
 const getProfileCard = (player) => {
     const profileCard = document.createElement('profile-card');
-    profileCard.setAttribute('kitNumber', player.kitNumber);
+    profileCard.setAttribute('kit-number', player.kitNumber);
     profileCard.setAttribute('name', player.name);
     profileCard.setAttribute('position', player.position);
     profileCard.setAttribute('country', player.country);
