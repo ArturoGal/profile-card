@@ -3,25 +3,25 @@ template.innerHTML = `
 <link rel="stylesheet" href="profile-card/styles.css">
 
 <div class="profile-card">
-  <p id="kitNumber"></p>
-  <img id="photo"/>
+  <p class="kit-number"></p>
+  <img class="photo"/>
   <div>
-    <p id="name"></p>
-    <div id="details">
+    <p class="name"></p>
+    <div class="details">
       <div class="info-slot">
-        <p>Position: </p> <p id="position"> </p>
+        <p class="position-label">Position: </p> <p class="position"> </p>
       </div>
       <div class="info-slot">
-        <p>Country: </p> <p id="country"> </p>
+        <p class="country-label">Country: </p> <p class="country"> </p>
       </div>
       <div class="info-slot">
-        <p>Age: </p> <p id="age"> </p>
+        <p class="age-label">Age: </p> <p class="age"> </p>
       </div>
       <div class="info-slot">
-        <p>Goals: </p> <p id="goals"> </p>
+        <p class="goals-label">Goals: </p> <p class="goals"> </p>
       </div>
       <div class="info-slot">
-        <p>Assists: </p> <p id="assists"> </p>
+        <p class="assists-label">Assists: </p> <p class="assists"> </p>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@ class ProfileCard extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
-    this.assignAttributeValueToElement('kitNumber');
+    this.assignAttributeValueToElement('kit-number');
     this.assignAttributeValueToElement('name');
     this.assignAttributeValueToElement('position');
     this.assignAttributeValueToElement('country');
@@ -43,15 +43,15 @@ class ProfileCard extends HTMLElement {
     this.assignPhotoSrc();
   }
 
-  assignAttributeValueToElement(id) {
-    const element = this.shadowRoot.getElementById(id);
+  assignAttributeValueToElement(attribute) {
+    const element = this.shadowRoot.querySelector(`.${attribute}`);
     if (element) {
-      element.innerHTML = this.getAttribute(id);
+      element.innerHTML = this.getAttribute(attribute);
     }
   }
 
   assignPhotoSrc() {
-    const photoImg = this.shadowRoot.querySelector('img#photo');
+    const photoImg = this.shadowRoot.querySelector('img.photo');
     if (photoImg) {
       photoImg.src = this.getAttribute('photo');
     }
