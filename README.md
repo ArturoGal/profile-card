@@ -14,3 +14,5 @@ npm run cypress:open
 In the Cypress UI, select E2E, choose your preferred browser, and run `profile-card.cy.js`.
 
 >If you are running your local server on a port different than `5500`, modify `baseUrl` property in the `cypress.config.js` file.
+
+### Go to `src/secret-santa.html`!
